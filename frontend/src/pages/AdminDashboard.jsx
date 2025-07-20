@@ -116,9 +116,8 @@ export default function AdminDashboard() {
             key={type}
             onClick={() => setView(type)}
             whileTap={{ scale: 0.95 }}
-            className={`px-4 py-2 rounded-lg transition-all ${
-              view === type ? "bg-green-500" : "bg-white/10 hover:bg-white/20"
-            }`}
+            className={`px-4 py-2 rounded-lg transition-all ${view === type ? "bg-green-500" : "bg-white/10 hover:bg-white/20"
+              }`}
           >
             {type === "stats" ? "Overview" : type === "resumes" ? "View Resumes" : "Add Job Role"}
           </motion.button>

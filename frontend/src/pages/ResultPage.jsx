@@ -120,13 +120,12 @@ export default function ResultPage() {
           <div className="space-y-4 text-sm">
             <div className="flex justify-between">
               <span className="text-gray-200">Relevance</span>
-              <span className={`px-2 py-1 rounded font-medium text-sm text-white/90 ${
-                data.score >= 85
+              <span className={`px-2 py-1 rounded font-medium text-sm text-white/90 ${data.score >= 85
                   ? "bg-cyan-500"
                   : data.score >= 65
-                  ? "bg-yellow-400 text-yellow-900"
-                  : "bg-red-400 text-red-900"
-              }`}>
+                    ? "bg-yellow-400 text-yellow-900"
+                    : "bg-red-400 text-red-900"
+                }`}>
                 {data.score >= 85 ? "Excellent" : data.score >= 65 ? "Good" : "Needs Work"}
               </span>
             </div>

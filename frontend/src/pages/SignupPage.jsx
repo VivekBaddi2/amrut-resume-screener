@@ -185,9 +185,8 @@ export default function SignupPage() {
           <motion.button
             type="submit"
             disabled={loading}
-            className={`w-full py-3 rounded-xl bg-blue-500 text-white font-semibold tracking-wide transition ${
-              loading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"
-            }`}
+            className={`w-full py-3 rounded-xl bg-blue-500 text-white font-semibold tracking-wide transition ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"
+              }`}
             whileHover={{ scale: loading ? 1 : 1.03 }}
             whileTap={{ scale: loading ? 1 : 0.97 }}
             variants={fadeInUp}

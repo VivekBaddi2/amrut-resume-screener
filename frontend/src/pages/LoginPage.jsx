@@ -146,9 +146,8 @@ export default function LoginPage() {
             type="submit"
             disabled={loading}
             whileTap={{ scale: 0.97 }}
-            className={`w-full py-3 rounded-xl bg-blue-500 text-white font-semibold tracking-wide transition ${
-              loading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"
-            }`}
+            className={`w-full py-3 rounded-xl bg-blue-500 text-white font-semibold tracking-wide transition ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"
+              }`}
           >
             {loading ? "Logging in..." : "Login"}
           </motion.button>

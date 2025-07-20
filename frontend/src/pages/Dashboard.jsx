@@ -202,11 +202,10 @@ export default function Dashboard() {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full py-3 rounded-lg font-semibold text-white transition duration-200 ${
-                loading
+              className={`w-full py-3 rounded-lg font-semibold text-white transition duration-200 ${loading
                   ? "bg-blue-400 cursor-not-allowed"
                   : "bg-green-500 hover:bg-green-600"
-              }`}
+                }`}
             >
               {loading ? "Uploading..." : "Upload & Screen Resume"}
             </button>
