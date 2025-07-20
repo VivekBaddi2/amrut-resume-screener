@@ -19,7 +19,7 @@ export default function ResultPage() {
     const fetchResult = async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/api/candidates/getCandidateById/${id}`
+          `https://resume-screener-ssvd.onrender.com/api/candidates/getCandidateById/${id}`
         );
         const result = await res.json();
 

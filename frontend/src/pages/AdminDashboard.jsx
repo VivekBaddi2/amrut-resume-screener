@@ -23,31 +23,31 @@ export default function AdminDashboard() {
   }, []);
 
   const fetchJobs = async () => {
-    const res = await fetch("http://localhost:5000/api/jobs/getJobCount");
+    const res = await fetch("https://resume-screener-ssvd.onrender.com/api/jobs/getJobCount");
     const data = await res.json();
     if (res.ok && data.count !== undefined) setJobCount(data.count);
   };
 
   const fetchAllJobs = async () => {
-    const res = await fetch("http://localhost:5000/api/jobs/getAllJobs");
+    const res = await fetch("https://resume-screener-ssvd.onrender.com/api/jobs/getAllJobs");
     const data = await res.json();
     if (data.success) setJobList(data.jobs || []);
   };
 
   const fetchCandidates = async () => {
-    const res = await fetch("http://localhost:5000/api/candidates/getAllCandidates");
+    const res = await fetch("https://resume-screener-ssvd.onrender.com/api/candidates/getAllCandidates");
     const data = await res.json();
     if (data.success) setCandidateList(data.data || []);
   };
 
   const fetchUsers = async () => {
-    const res = await fetch("http://localhost:5000/api/user/getUserCount");
+    const res = await fetch("https://resume-screener-ssvd.onrender.com/api/user/getUserCount");
     const data = await res.json();
     if (res.ok && data.count !== undefined) setUserCount(data.count);
   };
 
   const fetchUsersList = async () => {
-    const res = await fetch("http://localhost:5000/api/user/getAllUsers");
+    const res = await fetch("https://resume-screener-ssvd.onrender.com/api/user/getAllUsers");
     const data = await res.json();
     if (data.success) setUserList(data.users || []);
   };
@@ -59,7 +59,7 @@ export default function AdminDashboard() {
 
   const handleAddJob = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/api/jobs/create", {
+    const res = await fetch("https://resume-screener-ssvd.onrender.com/api/jobs/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -79,7 +79,7 @@ export default function AdminDashboard() {
 
   const handleDeleteJob = async (id) => {
     if (window.confirm("Are you sure you want to delete this job role?")) {
-      const res = await fetch(`http://localhost:5000/api/jobs/delete/${id}`, { method: "DELETE" });
+      const res = await fetch(`https://resume-screener-ssvd.onrender.com/api/jobs/delete/${id}`, { method: "DELETE" });
       const data = await res.json();
       if (data.success) {
         fetchAllJobs();
@@ -90,7 +90,7 @@ export default function AdminDashboard() {
 
   const handleDeleteUser = async (id) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
-      const res = await fetch(`http://localhost:5000/api/user/deleteUser/${id}`, { method: "DELETE" });
+      const res = await fetch(`https://resume-screener-ssvd.onrender.com/api/user/deleteUser/${id}`, { method: "DELETE" });
       const data = await res.json();
       if (data.success) {
         fetchUsers();

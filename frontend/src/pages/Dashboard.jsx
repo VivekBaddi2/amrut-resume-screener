@@ -61,7 +61,7 @@ export default function Dashboard() {
 
   const fetchJobs = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/jobs/getAllJobs");
+      const res = await fetch("https://resume-screener-ssvd.onrender.com/api/jobs/getAllJobs");
       const data = await res.json();
       if (data.success) setJobs(data.jobs);
     } catch (error) {
@@ -87,7 +87,7 @@ export default function Dashboard() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/candidates/upload/${selectedJobId}`,
+        `https://resume-screener-ssvd.onrender.com/api/candidates/upload/${selectedJobId}`,
         {
           method: "POST",
           body: formData,

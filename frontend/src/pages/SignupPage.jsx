@@ -29,7 +29,7 @@ export default function SignupPage() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/user/createUser", {
+      const res = await fetch("https://resume-screener-ssvd.onrender.com/api/user/createUser", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, phone, password }),
